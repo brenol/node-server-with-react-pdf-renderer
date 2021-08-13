@@ -1,0 +1,27 @@
+{
+  "name": "example-node-server-with-react-pdf-renderer",
+  "version": "1.0.0",
+  "description": "Example Node Server w/ Babel + React PDF Renderer",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "start": "npm run build && nodemon dist/index.js",
+    "serve": "npm run build && node dist/index.js",
+    "test": "npm run build && mocha --require @babel/register"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/register": "^7.4.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^2.0.18",
+    "react": "^17.0.2"
+  }
+}
