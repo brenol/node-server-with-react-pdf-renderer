@@ -5,7 +5,7 @@
   "ignore": [
     "node_modules"
   ],
-  "ext": "ts,mjs,js,json,graphql",
+  "ext": "ts,mjs,js,json,graphql,tsx,jsx",
   "exec": "etsc && node ./dist/index.js",
   "legacyWatch": true
 }
