@@ -4,24 +4,22 @@
   "description": "Example Node Server w/ Babel + React PDF Renderer",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel lib -d dist",
-    "start": "npm run build && nodemon dist/index.js",
-    "serve": "npm run build && node dist/index.js",
-    "test": "npm run build && mocha --require @babel/register"
+    "dev": "nodemon",
+    "build": "tsc && esbuild lib/index.tsx --jsx=transform --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/register": "^7.4.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.17.5"
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-pdf": "^6.2.0",
+    "esbuild": "^0.17.1",
+    "esbuild-node-tsc": "^2.0.5",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^2.0.18",
+    "@react-pdf/renderer": "^3.0.2",
     "react": "^17.0.2"
   }
 }
